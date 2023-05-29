@@ -6,7 +6,7 @@ const baseMempoolApiUrl = `${baseMempoolUrl}/api`
 const bitcoinPriceApiUrl = "https://blockchain.info/ticker?cors=true"
 const nostrRelayUrl = 'wss://nostr.openordex.org'
 const collectionsRepo = "ordinals-wallet/ordinals-collections"
-const exchangeName = 'openordex'
+const exchangeName = 'OrdinalX'
 const feeLevel = "hourFee" // "fastestFee" || "halfHourFee" || "hourFee" || "economyFee" || "minimumFee"
 const dummyUtxoValue = 1_000
 const nostrOrderEventKind = 802
@@ -245,7 +245,7 @@ function publishSellerPsbt(signedSalePsbt, inscriptionId, inscriptionNumber, ins
                     ['m', inscriptionNumber], // Inscription number
                     ['u', inscriptionUtxo], // Inscription UTXO
                     ['s', priceInSats.toString()], // Price in sats
-                    ['x', exchangeName], // Exchange name (e.g. "openordex")
+                    ['x', exchangeName], // Exchange name (e.g. "OrdinalX")
                 ],
                 content: signedSalePsbt,
             }
